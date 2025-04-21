@@ -7,22 +7,22 @@ import BarberPole from "@/../public/barber-pole.png";
 export default function Home() {
   return (
     <main className="grid place-items-center h-screen bg-background">
-      <section className="h-full flex py-3 justify-center items-center">
+      <section className="h-full flex sm:flex-row flex-col py-3 justify-center items-center">
         <div className=" w-1/4">
           <Image
             src={BarberPole}
             alt="barber-logo"
-            className="object-fit-contain animate-aurora"
+            className="object-cover animate-aurora"
           />
         </div>
         <div className=" flex flex-col justify-content-center items-center">
           <WordRotate
             words={["Hola", "Bienvenido a"]}
-            className="text-lg text-balance font-semibold"
+            className="text-lg text-balance font-semibold hidden sm:block"
           />
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tighter">
-            NorthFade
-            <AuroraText colors={["#FF0000", "#FFFFFF", "#0000FF"]}>
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-tighter flex space-x-2">
+            <p>NorthFade</p>
+            <AuroraText colors={["#FF0000", "#FFFFFF", "#0000FF"]} >
               Barber
             </AuroraText>
           </h1>
