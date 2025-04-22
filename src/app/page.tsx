@@ -3,6 +3,7 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import Image from "next/image";
 import BarberPole from "@/../public/barber-pole.png";
+import { BoxReveal } from "@/components/magicui/box-reveal";
 
 export default function Home() {
   return (
@@ -17,15 +18,17 @@ export default function Home() {
         </div>
         <div className=" flex flex-col justify-content-center items-center">
           <WordRotate
-            words={["Hola", "Bienvenido a"]}
+            words={["Hola 👋", "Bienvenido a"]}
             className="text-lg text-balance font-semibold hidden sm:block"
           />
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tighter flex space-x-2">
-            <p>NorthFade</p>
-            <AuroraText colors={["#FF0000", "#FFFFFF", "#0000FF"]} >
-              Barber
-            </AuroraText>
-          </h1>
+          <BoxReveal boxColor={"#18181b"} duration={0.5} >
+            <h1 className="text-4xl sm:text-6xl font-bold tracking-tighter flex space-x-2">
+              <p>NorthFade</p>
+              <AuroraText colors={["#FF0000", "#FFFFFF", "#0000FF"]} >
+                Barber
+              </AuroraText>
+            </h1>
+          </BoxReveal>
           <DockDemo />
         </div>
       </section>
